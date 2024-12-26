@@ -6,10 +6,16 @@
     <title>404 web</title>
   </head>
   <body>
-    <h1>test 404</h1>
+    <form action="https://ahsansp.github.io/test/" method="post">
+      <input type="hidden" name="param" />
+    </form>
     <script>
-      let currentUrl = window.location.href;
-      console.log(currentUrl);
+      const currentUrl = window.location.href;
+      data = currentUrl
+        .replace("https://ahsansp.github.io/test/", "", currentUrl)
+        .split("/");
+      console.log(data);
+      //   window.location.href = "https://ahsansp.github.io/test/";
     </script>
   </body>
 </html>
