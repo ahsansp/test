@@ -7,5 +7,9 @@
   </head>
   <body>
     <h1>test 404</h1>
+    <script>
+      let currentUrl = window.location.href;
+      document.getElementsByTagName("h1").innerHtml = currentUrl;
+    </script>
   </body>
 </html>
