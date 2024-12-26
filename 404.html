@@ -6,15 +6,18 @@
     <title>404 web</title>
   </head>
   <body>
-    <form action="https://ahsansp.github.io/test/" method="post">
-      <input type="hidden" name="param" />
+    <form action="https://ahsansp.github.io/test/" method="post" id="form">
+      <input type="hidden" name="param" id="param" />
     </form>
     <script>
       const currentUrl = window.location.href;
       data = currentUrl
         .replace("https://ahsansp.github.io/test/", "", currentUrl)
         .split("/");
-      console.log(data);
+      document.getElementById("param").value = encodeURIComponent(
+        JSON.stringify(data)
+      );
+      document.getElementById("form").submit();
       //   window.location.href = "https://ahsansp.github.io/test/";
     </script>
   </body>
